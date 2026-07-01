@@ -346,6 +346,40 @@ header p {
   margin-top: 8px;
   margin-bottom: 0;
 }
+@media (max-width: 560px) {
+  header h1 { font-size: clamp(1.6rem, 7vw, 2.1rem); }
+  header p { font-size: 0.88rem; }
+
+  .status-panel {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 12px 0;
+  }
+
+  .setup-panel {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .setup-control label {
+    width: auto;
+    flex: 1;
+  }
+
+  .setup-control input {
+    width: 90px;
+  }
+
+  .controls {
+    gap: 8px;
+  }
+
+  .action-btn, #reset-btn {
+    flex: 1 1 calc(50% - 8px);
+    padding: 12px 10px;
+    font-size: 0.9rem;
+  }
+}
 
 .action-btn,
 #reset-btn {
