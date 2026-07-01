@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RPS Group Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header>
+      <h1>RPS Group Simulator</h1>
+      <p>Watch a visual simulation where Rock, Paper, and Scissors bounce inside a box and convert each other on collision.</p>
+    </header>
+
+    <section class="status-panel">
+      <div>
+        <h2>Rock</h2>
+        <p>Count: <span id="rock-count">10</span></p>
+      </div>
+      <div>
+        <h2>Paper</h2>
+        <p>Count: <span id="paper-count">10</span></p>
+      </div>
+      <div>
+        <h2>Scissors</h2>
+        <p>Count: <span id="scissors-count">10</span></p>
+      </div>
+    </section>
+
+    <section class="setup-panel">
+      <div class="setup-control">
+        <label for="rock-input">Rock</label>
+        <input id="rock-input" type="number" min="0" max="120" value="10" />
+      </div>
+      <div class="setup-control">
+        <label for="paper-input">Paper</label>
+        <input id="paper-input" type="number" min="0" max="120" value="10" />
+      </div>
+      <div class="setup-control">
+        <label for="scissors-input">Scissors</label>
+        <input id="scissors-input" type="number" min="0" max="120" value="10" />
+      </div>
+    </section>
+
+    <div class="simulation-panel">
+      <canvas id="simulation-canvas"></canvas>
+    </div>
+
+    <section class="controls controls-visual">
+      <button id="start-btn" class="action-btn">Start</button>
+      <button id="pause-btn" class="action-btn disabled" disabled>Pause</button>
+      <button id="update-btn" class="action-btn">Update</button>
+      <button id="reset-btn" class="action-btn">Reset</button>
+      <button id="speed-btn" class="action-btn">2×</button>
+    </section>
+  </div>
+
+  <div id="winner-overlay" class="winner-overlay" role="dialog" aria-hidden="true">
+    <div class="winner-card">
+      <button id="close-popup-btn" class="close-popup" aria-label="Close winner popup">×</button>
+      <div class="winner-emoji" id="winner-emoji">🪨</div>
+      <div class="winner-message">
+        <span id="winner-text">Paper wins!</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
