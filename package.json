@@ -1,0 +1,11 @@
+{
+  "name": "rps-zombie-simulator",
+  "version": "0.1.0",
+  "description": "A rock-paper-scissors zombie simulator with a browser UI.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT"
+}
